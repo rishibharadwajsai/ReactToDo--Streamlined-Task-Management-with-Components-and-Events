@@ -41,7 +41,7 @@ function Form() {
   };
   const renderTodoItems = () => {
     return todoItems.map((item, index) => (
-      <div className="row text-center my-4" key={index}>
+      <div className="row text-center my-4 fw-semibold" key={index}>
         <div className="col-sm-5 p-1">{item.name}</div>
         <div className="col-sm-5 p-1">{item.dueDate}</div>
         <div className="col mb-2">
