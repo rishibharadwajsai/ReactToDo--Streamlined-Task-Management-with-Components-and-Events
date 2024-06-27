@@ -41,10 +41,10 @@ function Form() {
   };
   const renderTodoItems = () => {
     return todoItems.map((item, index) => (
-      <div className="row text-center my-4 fw-semibold" key={index}>
+      <div className="row text-center p-4 fw-semibold" key={index}>
         <div className="col-sm-5 p-1">{item.name}</div>
         <div className="col-sm-5 p-1">{item.dueDate}</div>
-        <div className="col mb-2">
+        <div className="col">
           <button
             className="btn btn-danger"
             onClick={() => handleDelete(index)}
@@ -63,7 +63,7 @@ function Form() {
           className="row border-bottom border-2 border-dark"
           onSubmit={handleSubmit}
         >
-          <div className="col-sm-5 my-4">
+          <div className="col-sm-5 p-4">
             <label htmlFor="exampleFormControlInput1" className="fw-semibold">
               Enter the text
             </label>
@@ -71,12 +71,12 @@ function Form() {
               type="text"
               className="mx-1 p-1 border border-2 border-dark rounded"
               id="exampleFormControlInput1"
-              placeholder="Enter the text"
+              placeholder=""
               value={itemName}
               onChange={handleOnChange}
             />
           </div>
-          <div className="col-sm-5 my-4">
+          <div className="col-sm-5 p-4">
             <label htmlFor="enterdate" className="form-label fw-semibold">
               Enter Date
             </label>
@@ -88,7 +88,7 @@ function Form() {
               onChange={handleOnChange}
             />
           </div>
-          <div className="col my-4">
+          <div className="col p-4">
             <button type="submit" className="btn btn-success">
               ADD
             </button>
