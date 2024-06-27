@@ -88,7 +88,7 @@ function Form() {
               onChange={handleOnChange}
             />
           </div>
-          <div className="col p-4 bg-dark">
+          <div className="col p-4">
             <button type="submit" className="btn btn-success">
               ADD
             </button>
