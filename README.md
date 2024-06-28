@@ -15,7 +15,7 @@ To use this component in your React project, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-repository.git
+   https://github.com/your-username/ReactToDo--Streamlined-Task-Management-with-Components-and-Events.git
    ```
 2. Navigate to the directory containing this component.
 
