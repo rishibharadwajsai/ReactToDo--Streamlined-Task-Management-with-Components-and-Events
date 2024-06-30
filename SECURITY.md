@@ -1,21 +1,28 @@
-# Security Policy
+## Security Policy
 
-## Supported Versions
+### Reporting a Vulnerability
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+We take security seriously. We appreciate your efforts to responsibly disclose your findings, and will make every effort to acknowledge your contributions.
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+To report a security vulnerability, please email us at [rishi.lella123@gmail.com](mailto:rishi.lella123@gmail.com) with a detailed description of the vulnerability and steps to reproduce it. I will respond to you within **2** business days.
 
-## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+### Expectations
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+- Provide detailed reports with reproducible steps and any necessary proof-of-concept code.
+- Allow a reasonable amount of time for us to address the issue you report before disclosing it publicly.
+- Make a good faith effort to avoid privacy violations, destruction of data, and interruption or degradation of our services.
+
+### Rewards
+
+We do not offer a formal bounty program at this time.
+
+### Legal
+
+We will not pursue legal action against individuals who discover and report vulnerabilities responsibly. We consider this work to be a valuable contribution to our security efforts and will not take any action to limit or prevent responsible disclosures.
+
+### Contact Us
+
+For questions about this policy, please contact us at [rishi.lella123@gmail.com](mailto:rishi.lella123@gmail.com).
+
+---
