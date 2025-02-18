@@ -1,0 +1,52 @@
+name: CI/CD for React App with Vite
+
+# Trigger the workflow on push and pull requests to the main branch
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout the code from the repository
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Step 2: Set up Node.js environment
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'  # Adjust the Node.js version as needed
+
+    # Step 3: Install dependencies
+    - name: Install dependencies
+      run: npm install
+
+    # Step 4: Build the app using Vite
+    - name: Build the app
+      run: npm run build
+
+    # Step 5: Run tests (Optional, you can skip this if you don’t have tests)
+    - name: Run tests
+      run: npm test  # This assumes you have a test script in package.json
+
+    # Step 6: Deploy to GitHub Pages
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        branch: gh-pages        # The branch where the site will be deployed
+        folder: dist            # Folder containing the build output (default Vite build folder)
+        token: ${{ secrets.GITHUB_TOKEN }}  # GitHub token for authentication
+
+    # Optional Step: Upload the build artifacts for debugging (useful in case of failures)
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: build
+        path: ./dist
