@@ -22,7 +22,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '16'  # Adjust the Node.js version as needed
+        node-version: '20'  # Adjust the Node.js version as needed
 
     # Step 3: Install dependencies
     - name: Install dependencies
@@ -44,9 +44,9 @@ jobs:
         folder: dist            # Folder containing the build output (default Vite build folder)
         token: ${{ secrets.GITHUB_TOKEN }}  # GitHub token for authentication
 
-    # Optional Step: Upload the build artifacts for debugging (useful in case of failures)
+    # Updated Step 7: Upload build artifacts (Now using actions/upload-artifact@v4)
     - name: Upload build artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: build
         path: ./dist
