@@ -22,7 +22,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '20'  # Adjust the Node.js version as needed
+        node-version: '16'  # Adjust the Node.js version as needed
 
     # Step 3: Install dependencies
     - name: Install dependencies
@@ -32,11 +32,7 @@ jobs:
     - name: Build the app
       run: npm run build
 
-    # Step 5: Run tests (Optional, you can skip this if you don’t have tests)
-    - name: Run tests
-      run: npm test  # This assumes you have a test script in package.json
-
-    # Step 6: Deploy to GitHub Pages
+    # Step 5: Deploy to GitHub Pages
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
@@ -44,7 +40,7 @@ jobs:
         folder: dist            # Folder containing the build output (default Vite build folder)
         token: ${{ secrets.GITHUB_TOKEN }}  # GitHub token for authentication
 
-    # Updated Step 7: Upload build artifacts (Now using actions/upload-artifact@v4)
+    # Step 6: Upload build artifacts (Now using actions/upload-artifact@v4)
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
       with:
