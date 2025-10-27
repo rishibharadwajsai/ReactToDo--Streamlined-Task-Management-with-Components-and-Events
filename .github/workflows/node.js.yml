@@ -2,8 +2,11 @@ name: React App - Build and Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ "main" ]   # Deploy every time you push to main
-  workflow_dispatch:        # Allow manual deploys from the Actions tab
+    branches: [ "main" ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build-and-deploy:
